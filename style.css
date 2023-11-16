@@ -1,0 +1,473 @@
+*{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'poppins',sans-serif
+  box-sizing: border-box;
+}
+
+body{
+background: #000000 ;
+color: #fff;
+}
+#header{
+    
+    width: 100%;
+    height: 100vh;
+    background-image: url(/images/background.png );
+    background-size: cover;
+    background-position: center;
+    
+}
+
+
+.container{
+    padding: 10px  ;
+}
+nav{
+    position: fixed;
+    display: flex ;
+    flex-wrap: wrap;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px ;
+    background: black;
+    justify-content: space-around;
+    align-items: start;
+    z-index: 100;
+}
+.logo{
+    position: relative;
+    font-style: oblique;
+    font-family: monospace;
+    font-stretch: expanded;
+    margin-left: -150px;
+    font-size:40px;
+    color: rgb(10, 115, 207);
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 100;
+    animation: alternate-reverse;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+color: white ;
+text-decoration: none;
+font-size: 110%;
+position: relative;
+font-family: Arial, Helvetica, sans-serif;
+}
+nav ul li a::after{
+    content: '' ;
+    width: 0%;
+    height: 3px;
+    background: rgb(10, 115, 207);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 15%;
+    margin-left: 40px;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header-text p {
+    font-size: 80%;
+    margin-top: -50px;
+    font-family: "montserrat";
+    letter-spacing: 4px;
+    text-indent: 40px;
+    text-transform: uppercase;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s all ease-out;
+    font-weight: bold;
+    color: rgb(212, 255, 0);
+  }
+  .header-text p.is-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+.header-text h1{
+    font-size: 80px;
+    margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header-text h1 span{
+    color: rgb(10, 115, 207);
+    font-size: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.change{
+	color: #9c27b0;
+}
+.change:after{
+	content: "";
+	animation: change 15s linear infinite;
+}
+@keyframes change{
+	 0%{
+	 	content: "Manish";
+	 	color: red;
+	 }
+	  10%{
+	 	content: "Manish";
+	 	color: yellow;
+	 }
+	 
+	  20%{
+	 	content: "Manish";
+	 	color: rgb(241, 15, 203);
+	 }
+	 
+	  30%{
+	 	content: "Manish";
+	 	color: black;
+	 }
+	 
+	  40%{
+	 	content: "Manish";
+	 	color: #2494fc;
+	 }
+	 
+	  50%{
+	 	content: "Manish";
+	 	color: orange;
+	 }
+	 
+	  60%{
+	 	content: "Manish";
+	 	color: green;
+	 }
+	 
+	  70%{
+	 	content: "Manish";
+	 	color: #8b0033;
+	 }
+	 
+	  80%{
+	 	content: "Manish";
+	 	color: #800080;
+	 }
+	 
+	  90%{
+	 	content: "Manish";
+	 	color: #4b0082;
+	 }
+	 
+	  100%{
+	 	content: "Manish";
+	 	color: #cdc332;
+	 }
+	 
+}
+.home-sci a{
+    
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    background: transparent;
+    border-radius: 50%;
+    border: 2px solid rgb(10, 115, 207);
+    font-size: 20px;
+    color: rgb(10, 115, 207);
+    margin: 20px;
+    margin-left: 50px;
+    transition: .5s ease;
+    opacity: 100;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.home-sci a:hover{
+    background-color: rgb(10, 115, 207);
+    color: #081b29;
+    box-shadow: 0 0 20px rgb(10, 115, 207);
+}
+.btn-box{
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 55px;
+    margin-top: 10px;
+    background-color: #ff0000aa;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 600;
+    opacity: 100;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 4s;
+    box-shadow: 0 0 15px #ffffff36;
+
+}
+
+.btn-box:hover{
+    box-shadow: 0 0 10px #ffffff,
+    0 0 20px #ffffff;
+}
+
+/*----------------about-------------*/
+#about{
+    padding: 80px 0 ;
+    color: #ffffff;
+}
+.row{
+    display: flex;
+    justify-content:space-between ;
+    flex-wrap: wrap;
+      
+}
+.about-column-1{
+    flex-basis: 29%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.about-column-1 img{
+        width: 70%;
+        border-color: #ffffff;
+        max-width: 50%;
+        height: auto;
+        transition: 1s ease-in;
+        opacity: 100;
+        animation: slideRightmost 1s ease forwards;
+        animation-delay: 1s;
+        box-shadow: 0 0 15px rgb(10, 115, 207) , 0 0 15px white;
+        border-radius: 50%;
+        
+
+}
+.about-column-2{
+    flex-basis: 60%;
+    color: #ffffff;
+}
+.about-column-2 p{
+    font-size: 20px;
+    
+}
+.subtitle{
+    font-size: 50px;
+    font-weight: 600;
+    font color: #fff;
+}
+.about-column-2 h1 span{
+    color: rgb(10, 115, 207);
+    
+}
+.about-column-2 h2{
+    font-size: 24px;
+    font-weight: 450;
+    color: #d81b1b;
+    line-height: 1.7;
+    margin: 10px 0px 15px;
+}
+.about-column-2 p{
+    font-weight: 50;
+    
+}
+    
+
+.tab-titles{
+    display: flex;
+    margin: 40px 200px 40px;
+    color: rgb(10, 115, 207);
+    
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: rgb(253, 254, 255);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 100%;
+}
+.tab-contents ul li span{
+color: #b90e0a;
+font-size: 17px;
+margin: 5px px 4px;
+
+}
+.tab-contents ul li span span{
+    color: #ffe6006a;
+    font-size: 12px;
+    margin: 5px px 4px;
+}
+.tab-contents ul li{
+    list-style: square;
+    margin:  10px 0;
+    }
+
+.tab-contents{
+    display: none;
+}    
+.tab-contents.active-tab{
+    display: block;
+}
+/* -------------------------SERVICES------------------------ */
+#services{
+padding: 30px 20px;}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.sub-title{
+    font-size: 50px;
+    font-weight: 600;
+    font color: #fff;
+}
+.sub-title span{
+    color: rgb(10, 115, 207);
+}
+.services-list div{
+    background: #262626;
+    padding: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    border-radius: 10px;
+    border-top: 20px;
+    border-style: solid;
+    border-color: #ffffff;
+    transition: background 0.5s, transform 0.5s;
+}
+.services-list div i{
+    font-size: 50px;
+
+    margin-bottom: 10px;
+
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: underline;
+    color: #e2cc0a;
+    margin-top: 20px;
+    font-size: 14px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background: rgb(10, 115, 207);
+    transform: translateY(-20px)
+}
+/* --------------------Contact-------------------- */
+.contact-left{
+    flex-basis: 35%;
+    margin-left: 20px;
+}
+.contact-left h1{
+    margin-bottom: 50%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #b90e0a;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.contact-right form{
+    width: 100%;
+    margin-top: 14.3%;
+}
+form input, form textarea{
+    width: 80%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 6px;
+    
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 500;
+    margin-top: 20px;
+    font-size: 30px;
+}
+/* ----------------------css for small screen----------------- */
+nav .fa-solid{
+    display: none;
+}
+@media only screen and (max-width: 800px){
+    #header{
+        background-image: url(images/mobile\ background.png);
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+}
